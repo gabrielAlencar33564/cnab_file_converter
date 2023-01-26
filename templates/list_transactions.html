@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNAB file converter</title>
+    <style>
+        nav {
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 10px;
+        }
+
+        a {
+            background-color: black;
+            padding: 5px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        ul {
+            margin: 0;
+            grid-template-columns: repeat(4, 1fr);
+            aspect-ratio: 4/4;
+            padding: 10px;
+            display: grid;
+            list-style: none;
+            gap: 20px;
+        }
+
+        li {
+            border-radius: 8px;
+            padding: 15px 15px 15px 20px;
+            border: solid 2px black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="">Home</a>
+    </nav>
+    <ul>
+        {% for item in ul %}
+        <li>
+            <p><b> Tipo: </b> {{ item.type }}</p>
+            <p><b> Data: </b> {{ item.date }}</p>
+            <p><b> Valor: </b> {{ item.value }}</p>
+            <p><b> CPF: </b> {{ item.cpf }}</p>
+            <p><b> Cartão: </b> {{ item.card }}</p>
+            <p><b> Hora: </b> {{ item.time }}</p>
+            <p><b> Dono da Loja: </b> {{ item.owner }}</p>
+            <p><b> Nome da Loja: </b> {{ item.store }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
