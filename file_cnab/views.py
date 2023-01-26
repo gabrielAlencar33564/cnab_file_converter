@@ -31,10 +31,10 @@ class UploadFileCnabView(APIView):
             
             data_serializer = dataSerializer(FileCnab.objects.all())
 
-        return render(request, "index.html", {"ul": data_serializer})
+        return render(request, "list_transactions.html", {"ul": data_serializer})
 
     def get(self, request):
-        return render(request, "index.html", {"form": UploadFileForm})
+        return render(request, "home.html", {"form": UploadFileForm})
     
 def dataSerializer(serializer):
     new_list = []
